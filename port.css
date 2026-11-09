@@ -1,0 +1,1129 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Cherry+Bomb+One&family=Coming+Soon&family=Hachi+Maru+Pop&family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barriecito&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Cherry+Bomb+One&family=Coming+Soon&family=Hachi+Maru+Pop&family=Patrick+Hand&family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Princess+Sofia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Henny+Penny&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: none !important;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden; 
+}
+
+/* BODY */
+body {
+    scroll-behavior: smooth;
+}
+body {
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+img {
+    -webkit-user-drag: none;
+}
+/* NAVBAR */
+.navbar {
+    font-family: "Patrick Hand", cursive;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+    height: 70px;
+    background-image: url(green.jpg);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position: fixed;
+    top: -100px;
+    left: 0;
+    z-index: 1000;
+    transition: top 2s ease;
+}
+    .navbar.show {
+        top: 0; 
+    }
+
+/* NAV LINKS */
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+    .nav-links a {
+        font-size: 25px;
+        text-decoration: none;
+        color: black;
+        padding: 15px;
+    }
+        .nav-links a:hover {
+            border: 2px dashed #5B7E3C;
+            border-radius: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            background: #A2CB8B;
+            color: white;
+            transition: transform 0.5s ease-in-out;
+            transform: translateY(20px);
+        }
+    /* MAIN CONTENT */
+    .main {
+        margin-top: 70px;
+        width: 100%;
+    }
+
+/* SECTIONS */
+.section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 500px;
+    padding-bottom: 500px;
+}
+
+/* CARDS */
+.card {
+    background: transparent;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* COLORS */
+.welcome {
+    background-image: url(FINALANI.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    align-content: center;
+    justify-items: center;
+    background-color: antiquewhite;
+    margin-bottom: -250px;
+}
+
+.about {
+    padding-top: -300px;
+    padding-bottom: -300px;
+    background: #f9b5b5;
+    position: relative;
+}
+
+.projects {
+    background: #f6e7a1;
+    position: relative;
+    padding-top: 700px;
+    padding-bottom: 500px;
+}
+/* FLIP BOX */
+.flip-box {
+    display: none;
+    margin-top: 10px;
+}
+
+/* BUTTON */
+button {
+    margin-top: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+/* NOTEBOOK CONTAINER */
+.notebook {
+    display: flex;
+    justify-items: left;
+    width: 500px;
+    height: 650px;
+    position: relative;
+    perspective: 2000px;
+    transition: transform 1s ease; /* smooth animation */
+}
+
+    .notebook:hover {
+        transform: translateX(100px) rotate(3deg) scale(1.1);
+    }
+    /* BOOK SPINE (left side shadow) */
+    .notebook::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 100%;
+        left: 0;
+        background: #333;
+        border-radius: 10px 0 0 10px;
+    }
+
+/* PAGES */
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    border-radius: 5px;
+    padding: 30px;
+    text-align: center;
+    transform-origin: left;
+    transition: transform 0.8s;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+/* PAGE STACKING */
+.page1 {
+    font-family: "Princess Sofia", cursive;
+    z-index: 2;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+}
+
+.page2 {
+    font-family: "Reenie Beanie", cursive;
+    z-index: 1;
+    transform: rotateY(0deg);
+    background-image: url(bg5.jpg);
+    background-size: cover;
+    font-size: 30px;
+    padding-top: 40px;
+}
+.page3 {
+    background-image: url(bg7.jpg);
+    background-size: cover;
+    font-size: 30px;
+    padding-top: 40px;
+    font-family: "Reenie Beanie", cursive;
+}
+.gifabtmep2 {
+    justify-content: left;
+    transform: translateX(100px);
+    }
+#gifff1 {
+    transition: transform 1s ease;
+}
+
+    #gifff1:hover {
+        transform: rotate(-3deg) scale(1.1);
+    }
+    /* PAGE TURN */
+    .page.flipped {
+        transform: rotateY(-180deg);
+    }
+
+    .textpage1 {
+        font-size: 30px;
+        width: 100%;
+        height: 30%;
+        padding: 15px;
+        border-radius: 20px;
+        background-color: #B4D3D9;
+    }
+
+    .notebookBtn {
+        text-align: center;
+        font-family: "Reenie Beanie", cursive;
+        background: #ffd6e0;
+        color: #5a4e4e;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-family: "Patrick Hand", cursive;
+        font-size: 25px;
+        cursor: pointer;
+        box-shadow: 0 5px 0 #e8aebd;
+        transition: all 0.2s ease;
+    }
+
+        .notebookBtn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .notebookBtn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 0 #e8aebd;
+        }
+
+
+
+
+
+.projecth1 {
+    font-family: "Princess Sofia", cursive;
+    font-size: 50px;
+}
+
+
+
+    .film-container, .film-container2 {
+        width: 100%;
+        overflow: hidden; /* hides outside content */
+        background: #111;
+        padding: 20px;
+    }
+
+    .film-strip {
+        display: flex;
+        width: max-content;
+        animation: scrollFilm 60s linear infinite;
+    }
+
+.film-strip2 {
+    margin-top: 40px;
+    display: flex;
+    width: max-content;
+    animation: scrollFilmReverse 60s linear infinite;
+}
+
+
+    .film-item {
+        min-width: 300px;
+        height: 200px;
+        margin: 0 10px;
+        background: #fff;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+    }
+
+    .film-item {
+        position: relative;
+    }
+
+        .film-item::before,
+        .film-item::after {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            top: 10px;
+        }
+
+        .film-item::before {
+            left: 10px;
+        }
+
+        .film-item::after {
+            right: 10px;
+        }
+    /* ANIMATION */
+    @keyframes scrollFilm {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-50%);
+        }
+    }
+
+    @keyframes scrollFilmReverse {
+        0% {
+            transform: translateX(-50%);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+
+    .stars-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* so stars don't block clicks */
+        overflow: hidden;
+    }
+
+    .star {
+        position: absolute;
+        font-size: 60px;
+        color: #FF537B;
+        opacity: 0;
+        animation: floatStar 6s ease-in-out infinite;
+    }
+        /* spread stars across different spots and timings */
+        .star:nth-child(1) {
+            left: 5%;
+            top: 20%;
+            animation-delay: 0s;
+            font-size: 40px;
+        }
+
+        .star:nth-child(2) {
+            left: 15%;
+            top: 70%;
+            animation-delay: 1s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(3) {
+            left: 25%;
+            top: 40%;
+            animation-delay: 2s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(4) {
+            left: 75%;
+            top: 15%;
+            animation-delay: 0.5s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(5) {
+            left: 85%;
+            top: 60%;
+            animation-delay: 1.5s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(6) {
+            left: 60%;
+            top: 80%;
+            animation-delay: 3s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(7) {
+            left: 90%;
+            top: 35%;
+            animation-delay: 2.5s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(8) {
+            left: 45%;
+            top: 10%;
+            animation-delay: 0.8s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(9) {
+            left: 10%;
+            top: 90%;
+            animation-delay: 4s;
+            font-size: 100px;
+        }
+
+        .star:nth-child(10) {
+            left: 70%;
+            top: 50%;
+            animation-delay: 3.5s;
+            font-size: 100px;
+        }
+
+    @keyframes floatStar {
+        0% {
+            transform: translateY(0px) rotate(0deg);
+            opacity: 0;
+        }
+
+        25% {
+            opacity: 0.8;
+        }
+
+        50% {
+            transform: translateY(-30px) rotate(180deg);
+            opacity: 1;
+        }
+
+        75% {
+            opacity: 0.6;
+        }
+
+        100% {
+            transform: translateY(0px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+
+
+
+
+
+
+
+    .star-divider {
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+        overflow: visible;
+        position: relative;
+        z-index: 999;
+        margin-top: -25px;
+        margin-bottom: -25px;
+    }
+
+        .star-divider span {
+            font-size: 50px;
+            color: white;
+            animation: spinStar 3s linear infinite;
+        }
+
+            .star-divider span:nth-child(2) {
+                animation-delay: 0.3s;
+            }
+
+            .star-divider span:nth-child(3) {
+                animation-delay: 0.6s;
+            }
+
+            .star-divider span:nth-child(4) {
+                animation-delay: 0.9s;
+            }
+
+            .star-divider span:nth-child(5) {
+                animation-delay: 1.2s;
+            }
+
+    @keyframes spinStar {
+        0% {
+            transform: rotate(0deg) scale(1);
+            opacity: 0.5;
+        }
+
+        50% {
+            transform: rotate(180deg) scale(1.4);
+            opacity: 1;
+        }
+
+        100% {
+            transform: rotate(360deg) scale(1);
+            opacity: 0.5;
+        }
+    }
+
+
+
+
+
+.projecttext {
+    font-family: "Patrick Hand", cursive;
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.camera-scroll {
+    position: absolute;
+    top: 100px;
+    right: 10px;
+    opacity: 0;
+    transform: translateY(-80px) rotate(-20deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: 999;
+}
+
+    .camera-scroll.visible {
+        opacity: 1;
+        animation: cameraDropIn 0.8s ease forwards, cameraFloat 3s ease-in-out 0.8s infinite;
+    }
+
+.paint-scroll {
+    position: absolute;
+    top: 900px;
+    left: 20px;
+    opacity: 0;
+    transform: translateY(-80px) rotate(-20deg);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: 999;
+}
+
+    .paint-scroll.visible {
+        opacity: 1;
+        animation: cameraDropIn 0.8s ease forwards, cameraFloat 3s ease-in-out 0.8s infinite;
+    }
+
+@keyframes cameraDropIn {
+    from {
+        transform: translateY(-80px) rotate(-20deg);
+    }
+
+    to {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes cameraFloat {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(5deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+
+
+
+.contact {
+    background: #bde0ff;
+    position: relative;
+    overflow: hidden;
+    max-height: 100vh; /* remove your old max-height: 200px */
+}
+
+.stars-contact {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.sc {
+    position: absolute;
+    color: white;
+    opacity: 0;
+    animation: twinkleC 4s ease-in-out infinite;
+}
+
+    .sc:nth-child(1) {
+        left: 5%;
+        top: 15%;
+        animation-delay: 0s;
+    }
+
+    .sc:nth-child(2) {
+        left: 90%;
+        top: 10%;
+        animation-delay: 0.5s;
+    }
+
+    .sc:nth-child(3) {
+        left: 20%;
+        top: 80%;
+        animation-delay: 1s;
+    }
+
+    .sc:nth-child(4) {
+        left: 75%;
+        top: 70%;
+        animation-delay: 1.5s;
+    }
+
+    .sc:nth-child(5) {
+        left: 50%;
+        top: 5%;
+        animation-delay: 2s;
+    }
+
+    .sc:nth-child(6) {
+        left: 10%;
+        top: 50%;
+        animation-delay: 2.5s;
+    }
+
+    .sc:nth-child(7) {
+        left: 85%;
+        top: 45%;
+        animation-delay: 3s;
+    }
+
+    .sc:nth-child(8) {
+        left: 40%;
+        top: 90%;
+        animation-delay: 0.8s;
+    }
+
+    .sc:nth-child(9) {
+        left: 65%;
+        top: 25%;
+        animation-delay: 1.8s;
+    }
+
+    .sc:nth-child(10) {
+        left: 30%;
+        top: 35%;
+        animation-delay: 3.2s;
+    }
+
+.contact-card {
+    background: rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 40px 50px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+}
+
+.contact-quote {
+    font-family: "Princess Sofia", cursive;
+    font-size: 26px;
+    color: #3a3a6e;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.contact-divider {
+    font-size: 18px;
+    color: #ffcc00;
+    letter-spacing: 10px;
+    margin: 10px 0 24px;
+    animation: spinDiv 4s linear infinite;
+    display: inline-block;
+}
+
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 12px 20px;
+    text-decoration: none;
+    font-family: "Patrick Hand", cursive;
+    font-size: 18px;
+    color: #3a3a6e;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+    .contact-item:hover {
+        transform: translateY(-3px);
+        background: rgba(255, 255, 255, 0.6);
+    }
+
+@keyframes twinkleC {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes spinDiv {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+.film-item {
+    overflow: hidden;
+    transition: height 0.4s ease, min-width 0.4s ease;
+}
+
+    .film-item .film-desc {
+        position: absolute;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.75);
+        color: white;
+        font-family: "Patrick Hand", cursive;
+        font-size: 14px;
+        padding: 10px 12px;
+        text-align: center;
+        transition: bottom 0.4s ease;
+        border-radius: 0 0 10px 10px;
+        pointer-events: none;
+    }
+
+    .film-item:hover {
+        height: 260px; /* expanded height */
+        min-width: 320px;
+    }
+
+        .film-item:hover .film-desc {
+            bottom: 0;
+        }
+
+        .film-item:hover img {
+            transform: translateY(-20px);
+            transition: transform 0.4s ease;
+        }
+
+    .film-item img {
+        transition: transform 0.4s ease;
+    }
+
+
+
+
+
+
+
+
+
+
+
+.goals {
+    background: #B0E4CC;
+    position: relative;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.goals-heading {
+    font-family: "Princess Sofia", cursive;
+    font-size: 52px;
+    color: white;
+    text-align: center;
+}
+
+.goals-sub {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 26px;
+    color: #e89ab0;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.corkboard {
+    background: #d4a96a;
+    border-radius: 20px;
+    padding: 40px 36px;
+    border: 6px solid #b8834a;
+    width: 90%;
+    max-width: 860px;
+}
+
+.polaroids-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    justify-content: center;
+}
+
+.polaroid-card {
+    background: white;
+    padding: 14px 14px 44px;
+    width: 160px;
+    cursor: pointer;
+    position: relative;
+    box-shadow: 3px 4px 0 rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .polaroid-card:nth-child(1) {
+        transform: rotate(-4deg);
+    }
+
+    .polaroid-card:nth-child(2) {
+        transform: rotate(2.5deg);
+    }
+
+    .polaroid-card:nth-child(3) {
+        transform: rotate(-2deg);
+    }
+
+    .polaroid-card:nth-child(4) {
+        transform: rotate(3.5deg);
+    }
+
+    .polaroid-card:nth-child(5) {
+        transform: rotate(-3deg);
+    }
+
+    .polaroid-card:nth-child(6) {
+        transform: rotate(1.5deg);
+    }
+
+    .polaroid-card:hover {
+        transform: rotate(0deg) scale(1.1) translateY(-8px) !important;
+        box-shadow: 6px 10px 0 rgba(0,0,0,0.25);
+        z-index: 10;
+    }
+
+.tape {
+    position: absolute;
+    width: 50px;
+    height: 16px;
+    background: rgba(255,255,180,0.7);
+    border-radius: 2px;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    z-index: 3;
+}
+
+.pin {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    z-index: 3;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.pol-photo {
+    width: 100%;
+    height: 100px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+}
+
+.pol-caption {
+    font-family: "Henny Penny", system-ui;
+    font-size: 19px;
+    color: #555;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pol-desc {
+    font-family: "Patrick Hand", cursive;
+    font-size: 11px;
+    color: #aaa;
+    text-align: center;
+    margin-top: 4px;
+}
+
+.goals-quote {
+    font-family: "Reenie Beanie", cursive;
+    font-size: 22px;
+    color: #c0566e;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.floating-stars-goals {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.fsg {
+    position: absolute;
+    color: #f9b5b5;
+    font-size: 22px;
+    animation: floatfsg 5s ease-in-out infinite;
+    opacity: 0;
+}
+
+    .fsg:nth-child(1) {
+        left: 5%;
+        top: 10%;
+        animation-delay: 0s;
+    }
+
+    .fsg:nth-child(2) {
+        left: 90%;
+        top: 20%;
+        animation-delay: 1s;
+    }
+
+    .fsg:nth-child(3) {
+        left: 15%;
+        top: 80%;
+        animation-delay: 2s;
+    }
+
+    .fsg:nth-child(4) {
+        left: 80%;
+        top: 70%;
+        animation-delay: 0.5s;
+    }
+
+    .fsg:nth-child(5) {
+        left: 50%;
+        top: 5%;
+        animation-delay: 1.5s;
+    }
+
+    .fsg:nth-child(6) {
+        left: 70%;
+        top: 90%;
+        animation-delay: 3s;
+    }
+
+    .fsg:nth-child(7) {
+        left: 30%;
+        top: 15%;
+        animation-delay: 2.5s;
+    }
+
+    .fsg:nth-child(8) {
+        left: 60%;
+        top: 50%;
+        animation-delay: 4s;
+    }
+
+@keyframes floatfsg {
+    0%,100% {
+        opacity: 0;
+        transform: translateY(0) rotate(0deg);
+    }
+
+    50% {
+        opacity: 0.7;
+        transform: translateY(-15px) rotate(20deg);
+    }
+}
+
+
+
+
+
+
+.cursor-star {
+    position: absolute;
+    pointer-events: none;
+    font-size: 20px;
+    color: #FFD700;
+    animation: fadeStar 1s ease-out forwards;
+}
+
+@keyframes fadeStar {
+    0% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-20px);
+    }
+}
+
+
+
+
+.section {
+    animation: floatSection 6s ease-in-out infinite;
+}
+
+@keyframes floatSection {
+    0%,100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+film-item{
+    animation-play-state: paused;
+}
+
+
+
+
+
+.burst-star {
+    position: absolute;
+    pointer-events: none;
+    animation: burst 0.6s ease-out forwards;
+}
+
+@keyframes burst {
+    to {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+
+
+
+.shooting-star {
+    position: absolute;
+    color: #fff;
+    font-size: 20px;
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes shoot {
+    0% {
+        opacity: 1;
+        transform: translate(0,0) rotate(45deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(300px, 300px) rotate(45deg);
+    }
+}
+
+
+
+
+
+
+
+.floaty {
+    position: fixed;
+    bottom: -20px;
+    color: rgba(255,255,255,0.6);
+    animation: rise 6s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes rise {
+    to {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+body {
+    cursor: none;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    z-index: 10000000000;
+    background: url('cursor1.png') no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+
+
